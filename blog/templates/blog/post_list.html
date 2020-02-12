@@ -1,30 +1,22 @@
 <html>
 <head>
     <title>
-        Cosmic blog
+        My work using Django
     </title>
 </head>
 <body>
     <div>
-        <h1><a href="/">Neutron Stars</a></h1>
-        <p>"The amber left after the beautiful fire dance of a celestial object".</p>
-        <p>The line is beautiful, so are neutron stars. A neutron star is the <em>remnant</em> of stars having solar mass 5-10 times the sun.</p>
-        <p>A neutron star can transform into two different celestial objects, viz.</p>
-        <ul><li><strong>Pulsar</strong></li><li><strong>Magnetar</strong></li></ul>
+        <h1><a href="/">Django Work</a></h1>
     </div>
+   {% for post in posts %}
+
     <div>
-        <h2><a href="">Pulsar</a> </h2>
-        <p>Notice how the browser has understood that "Ola's blog" is the title of your page? It has interpret and placed the text in the title bar of your browser (it will also be used for bookmarks and so on).</p>
+        <p>published : {{ post.published_date }}</p>
+        <h2><a href=""> {{ post.title }}</a></h2>
+        <p>{{ post.text | linebreaksbr }}</p>
+
     </div>
-    <div>
-        <p>shit</p>
-        <h2><a href="">Magnetar</a> </h2>
-        <p>Notice how the browser has understood that "Ola's blog" is the title of your page? It has interpret and placed the text in the title bar of your browser (it will also be used for bookmarks and so on).</p>
-    <p>Hi there!</p>
-    </div>
-    <p>It works!
-        nikhil is amazing for sure
-        still working
-    </p>
+
+   {% endfor %}
 </body>
 </html>
